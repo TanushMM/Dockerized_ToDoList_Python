@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="../static/css/styles.css" />
+  </head>
+  <body>
+    <div id="main">
+      <h1>Todo List</h1>
+      <h2>Developed by Tanush M M</h2>
+      <h2>Technologies used: Python, Flask, MongoDB, Docker, HTML, CSS</h2>
+      <div id="main-contents">
+        <div id="form">
+          <form action="" method="post">
+            <h4><label for="heading">Heading</label></h4>
+            <input type="text" name="heading" id="heading" />
+
+            <h4><label for="content">Contents</label></h4>
+            <textarea id="content" name="content" rows="4" cols="50"></textarea>
+            <br /><br />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+        <br />
+        <hr />
+
+        <div id="data">
+          <h2>Data from MongoDB</h2>
+          {% if data %} {% for i in data %}
+          <div id="mongo-data">
+            <h3>{{ i['heading'] }}</h3>
+            <form action="/delete/{{ i['_id'] }}" method="post">
+              <button>Delete</button>
+            </form>
+            <hr />
+            <p>{{ i['content'] }}</p>
+          </div>
+          {% endfor %} {% else %}
+          <h3>No Data Found - Add some Todo to see it here</h3>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
