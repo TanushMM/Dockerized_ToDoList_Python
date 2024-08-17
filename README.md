@@ -6,16 +6,16 @@ This is a simple Todo List application built using Flask, MongoDB, and Docker. T
 
 .
 ├── static/ <br>
-│&emsp;└── css/ # Stylesheets <br>
+│&emsp;└── css/              # Stylesheets <br>
 ├── templates/ <br>
-│&emsp;└── index.html # Frontend HTML for the application <br>
-├── application.py # Main Flask application file <br>
-├── readme.md # Documentation for the project <br>
-├── requirements.txt # Python dependencies <br>
-├── Dockerfile # Dockerfile to build the Flask app image <br>
-├── docker-compose.yaml # Docker Compose to orchestrate Flask app and MongoDB <br>
-├── .gitignore # Files to ignore in Git <br>
-└── .dockerignore # Files to ignore in Docker build <br>
+│&emsp;└── index.html        # Frontend HTML for the application <br>
+├── application.py           # Main Flask application file <br>
+├── readme.md                # Documentation for the project <br>
+├── requirements.txt         # Python dependencies <br>
+├── Dockerfile               # Dockerfile to build the Flask app image <br>
+├── docker-compose.yaml      # Docker Compose to orchestrate Flask app and MongoDB <br>
+├── .gitignore               # Files to ignore in Git <br>
+└── .dockerignore            # Files to ignore in Docker build <br>
 
 ## Prerequisites
 
