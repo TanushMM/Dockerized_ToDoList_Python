@@ -1,0 +1,13 @@
+services:
+    client:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - "5000:5000"
+    db:
+        image: mongo
+        volumes:
+            - todolist-volume:/data/db
+volumes:
+    todolist-volume:
